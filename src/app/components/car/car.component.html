@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let car of cars">
+    <div class="card">
+      <img *ngIf="car.imagePath.length==0" src="https://localhost:44381/uploads/{{defaultImage}}" class="card-img-top car-image"/>
+      <img *ngIf="car.imagePath.length!=0"  src="{{imageUrl}}{{ car.imagePath[0].imagePath }}" class="card-img-top car-image"/>
+      <ul class="list-group text-center">
+        <li class="list-group-item">{{ car.carName }}</li>
+        <li class="list-group-item">{{ car.brandName }}</li>
+        <li class="list-group-item">{{ car.colorName }}</li>
+        <li class="list-group-item">{{ car.dailyPrice }}</li>
+        <li class="list-group-item"><button routerLink="/car/cardetail/{{car.carId}}" type="button" class="btn btn-dark">Car Detail</button></li>
+      </ul>
+    </div>
+  </div>
+</div>
