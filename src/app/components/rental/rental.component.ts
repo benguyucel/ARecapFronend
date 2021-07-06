@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RentalDetail } from 'src/app/models/rentaldetail';
-import { RentaldetailService } from 'src/app/services/rentaldetail.service';
+
 
 @Component({
   selector: 'app-rental',
@@ -9,14 +9,10 @@ import { RentaldetailService } from 'src/app/services/rentaldetail.service';
 })
 export class RentalComponent implements OnInit {
   rentalDetails: RentalDetail[] = [];
-  constructor(private rentalDetailService: RentaldetailService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.getRentalDetails();
+
   }
-  getRentalDetails() {
-    this.rentalDetailService.getRentalDetails().subscribe((response) => {
-      this.rentalDetails = response.data;
-    });
-  }
+ 
 }

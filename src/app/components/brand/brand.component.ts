@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Brand } from 'src/app/models/brand';
 import { BrandService } from 'src/app/services/brand.service';
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-brand',
@@ -10,6 +11,7 @@ import { BrandService } from 'src/app/services/brand.service';
 export class BrandComponent implements OnInit {
   brands: Brand[] = [];
   currentBrand:Brand;
+  filterText="";
   constructor(private brandService: BrandService) {}
 
   ngOnInit(): void {
@@ -32,5 +34,9 @@ export class BrandComponent implements OnInit {
     this.brandService.getBrands().subscribe((response) => {
       this.brands = response.data;
     });
+  }
+
+  toggleClass(){
+      $(".brand-list").slideToggle();
   }
 }

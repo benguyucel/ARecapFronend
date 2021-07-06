@@ -1,26 +1,40 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Brand Name</th>
-        <th scope="col">Color Name</th>
-        <th scope="col">Car Price</th>
-        <th scope="col">Rent Date</th>
-        <th scope="col">Return Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let rentaldetail of rentalDetails">
-        <th scope="row">{{rentaldetail.id}}</th>
-        <th scope="row">{{rentaldetail.firstName}}</th>
-        <th scope="row">{{rentaldetail.lastName}}</th>
-        <th scope="row">{{rentaldetail.brandName}}</th>
-        <th scope="row">{{rentaldetail.colorName}}</th>
-        <th scope="row">{{rentaldetail.carName}}</th>
-        <th scope="row">{{rentaldetail.rentDate}}</th>
-        <th scope="row">{{rentaldetail.returnDate}}</th>
-      </tr>
-    </tbody>
-  </table>
+<div class="card">
+  <div class="card-body justify-content-center d-flex">
+    <div class="row">
+      <div class="col-md-12 mt-5">
+        <div class="left border">
+          <div class="row">
+            <span class="header">Payment</span>
+            <div class="icons">
+              <img src="https://img.icons8.com/color/48/000000/visa.png" />
+              <img
+                src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
+              />
+              <img src="https://img.icons8.com/color/48/000000/maestro.png" />
+            </div>
+          </div>
+          <form>
+            <span>Cardholder's name:</span>
+            <input placeholder="Linda Williams" /> <span>Card Number:</span>
+            <input placeholder="0125 6780 4567 9909" />
+            <div class="row">
+              <div class="col-4">
+                <span>Expiry date:</span> <input placeholder="YY/MM" />
+              </div>
+              <div class="col-4"><span>CVV:</span> <input id="cvv" /></div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="checkbox" id="save_card" class="align-left" />
+            <label for="save_card">Save card details to wallet</label>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-primary">PAY</button>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

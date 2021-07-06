@@ -4,8 +4,10 @@
 
 export const environment = {
   production: false,
-  defaultImage:"default.png",
-  ImageUrl:"https://localhost:44381/uploads/"
+  defaultImage: 'default.png',
+  ImageUrl: 'https://localhost:44381/uploads/',
+  isVisible: true,
+  apiUrl: 'https://localhost:44381/api/',
 };
 
 /*
